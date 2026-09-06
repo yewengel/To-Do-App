@@ -20,11 +20,16 @@ function addTask() {
     text.textContent = taskText;
     text.classList.add("task-text");
 
+    const completedButton = document.createElement("button");
+    completedButton.textContent = "Completed";
+    completedButton.classList.add("completed-button");
+
     const deleteButton = document.createElement("button");
     deleteButton.textContent = "Delete";
     deleteButton.classList.add("delete-button");
 
     task.appendChild(text);
+    task.appendChild(completedButton);
     task.appendChild(deleteButton);
 
     taskList.appendChild(task);
@@ -34,11 +39,12 @@ function addTask() {
 
     taskInput.value = "";
 
-    text.addEventListener("click", function () {
+    completedButton.addEventListener("click", function () {
         text.classList.toggle("completed");
     });
 
     deleteButton.addEventListener("click", function () {
+
         task.remove();
 
         count = count - 1;
@@ -46,10 +52,14 @@ function addTask() {
     });
 }
 
+
+// Add button
 addButton.addEventListener("click", function () {
     addTask();
 });
 
+
+// Enter key
 taskInput.addEventListener("keydown", function (event) {
 
     if (event.key === "Enter") {
