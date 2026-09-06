@@ -2,8 +2,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #d28b8b;
     margin: 0;
-
-    /* Center the main box */
     min-height: 100vh;
     display: flex;
     justify-content: center;
