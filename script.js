@@ -52,14 +52,10 @@ function addTask() {
     });
 }
 
-
-// Add button
 addButton.addEventListener("click", function () {
     addTask();
 });
 
-
-// Enter key
 taskInput.addEventListener("keydown", function (event) {
 
     if (event.key === "Enter") {
